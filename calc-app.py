@@ -3,6 +3,9 @@ operations = {'addition': 1, 'subtraction': 2, 'multiplication': 3, 'division': 
 def chomp_addition(num1, num2):
     return num1 + num2
 
+def chomp_subtraction(num1, num2):
+    return num1 - num2
+
 welcome_message = \
         ("Welcome to the Chomp Calc App! \n "
          "Select which operation to perform: \n "
@@ -41,4 +44,21 @@ if operation_selected == 1:
         print("Wrong Value Type")
         exit()
     result = chomp_addition(num1, num2)
+    print (result)
+
+if operation_selected == 2:
+    print ("Sweet Subtraction")
+    print ("Enter number 1: ")
+    try:
+        num1 = float(input())
+    except ValueError:
+        print("Wrong Value Type")
+        exit()
+    print ("Enter number 2: ")
+    try:
+        num2 = float(input())
+    except ValueError:
+        print("Wrong Value Type")
+        exit()
+    result = chomp_subtraction(num1, num2)
     print (result)
